@@ -23,7 +23,8 @@ app.use(validateSession);
 
 app.use(require('./routes/login'))
 app.use(require('./routes/register'))
-app.use(require('./routes/allFlights'))
+app.use(require('./routes/northwind'))
+app.use(require('./routes/orders'))
 
 
 app.listen(process.env.PORT, (err) => {

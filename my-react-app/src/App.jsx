@@ -5,7 +5,7 @@ import ButtonAppBar from '../src/components/ButtonAppBar';
 import Register from '../src/components/Registration';
 import Login from '../src/components/Login';
 import Home from '../src/components/Home';
-import AllFlights from '../src/components/AllFlights';
+import AllOrders from './components/AllOrders';
 
 
 export default function App() {
@@ -16,7 +16,7 @@ export default function App() {
                 <ButtonAppBar />
 
                 <Switch>
-                    <Route path="/allFlights" component={AllFlights} />
+                    <Route path="/orders" component={AllOrders} />
                     <Route path="/registration" component={Register} />
                     <Route path="/login" component={Login} />
                     <Route path="/home" component={Home} />

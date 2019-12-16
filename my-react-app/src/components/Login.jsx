@@ -29,7 +29,7 @@ export default class Login extends React.Component {
         alert(message);
         if (redirect && token) {
             this.state.token = token;
-            this.props.history.push('/allFlights')
+            this.props.history.push('/orders')
         }
         console.log(this.state)
     }
