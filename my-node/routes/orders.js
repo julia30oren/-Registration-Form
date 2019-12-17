@@ -6,10 +6,9 @@ router.get("/orders", async(req, res, next) => {
 
     const [query, params] = getOrdersQuery(req.query)
     const result = await pool.execute(query, params);
-    // const [ordersRes] = result;
     // console.log(result[0][0], "-------")
     res.json(result[0])
-        // res.json(first.map(row => row.ship_city))
+        // res.json(result.map(row => row.ship_city))
 })
 
 function getOrdersQuery(params) {
