@@ -24,17 +24,17 @@ const pool = require("../DB/pool");
 // });
 
 router.post("/registration", async(req, res, next) => {
-    const [query, params] = ifUserExist(req.query);
+    const [query, params] = ifUserExist(req.body);
     const user = await pool.execute(query, params);
     console.log(user[0][0], '--user');
-    const { email, password } = req.query;
+    const { email, password } = req.body;
 
     if (user[0][0]) {
         return res.json({ message: 'user allready exist' });
     } else {
         const result = await pool.execute(addUserInsert(), [email, password]);
         console.log(result);
-        res.json({ message: 'user is added !!!!' });
+        res.json({ message: 'user is added !!!!', redirect: true });
     }
 })
 

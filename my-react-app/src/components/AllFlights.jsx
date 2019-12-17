@@ -1,10 +1,10 @@
-import React from 'react';
+// import React from 'react';
 
-export default function AllFlights() {
+// export default function AllFlights() {
 
-    return (
-        <div className="AppHome">
-            <h1>AllFlights</h1>
-        </div>
-    )
-}
+//     return (
+//         <div className="AppHome">
+//             <h1>AllFlights</h1>
+//         </div>
+//     )
+// }
