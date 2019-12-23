@@ -1,5 +1,6 @@
 const logger = require("../utils/logger");
 
+
 module.exports = (req, res, next) => {
     const { key } = req.query;
     if (key === process.env.API_KEY) return next()

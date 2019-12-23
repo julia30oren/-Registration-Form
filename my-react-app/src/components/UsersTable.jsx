@@ -9,7 +9,6 @@ const UsersTable = (props) => {
             <td>{props.password}</td>
             <td>{props.first_name}</td>
             <td>{props.last_name}</td>
-            <td>{props.token}</td>
         </tr>
 
     )

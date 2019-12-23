@@ -27,6 +27,13 @@ app.use(require('./routes/northwind'))
 app.use(require('./routes/orders'))
 app.use(require('./routes/users'))
 
+app.get("/hc", (req, res, next) => {
+    res.send("ok")
+})
+app.get("/test", (req, res, next) => {
+    console.log(req.headers)
+    res.send("main axios is working...")
+})
 
 app.listen(process.env.PORT, (err) => {
     if (err) {
